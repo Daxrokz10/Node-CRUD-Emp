@@ -1,24 +1,30 @@
-function editEmployee(employee) {
-  document.querySelector('input[name="ID"]').value = employee.id;
-  document.querySelector('input[name="name"]').value = employee.name;
-  document.querySelector('input[name="email"]').value = employee.email;
-  document.querySelector('input[name="gender"]').value = employee.gender;
-  document.querySelector('input[name="salary"]').value = employee.salary;
-  document.querySelector('input[name="role"]').value = employee.role;
+// function showForm() {
+//   document.getElementById("form-container").style.display = "block";
+//   document.getElementById("table-container").style.display = "none";
+// }
 
-  document.querySelector('form').action = `/edit/${employee.id}`;
-  document.querySelector('button[type="submit"]').textContent = 'Update';
-}
-function toggleForm() {
-  document.getElementById('form-container').style.display = 'block';
-  document.getElementById('table-container').style.display = 'none';
-}
-document.getElementById('searchBox').addEventListener('input', function () {
+// function hideForm() {
+//   document.getElementById("form-container").style.display = "none";
+//   document.getElementById("table-container").style.display = "block";
+// }
+
+
+
+// // Show table after submitting the form
+// window.addEventListener("load", () => {
+//   const formSubmitted = window.location.href.includes("submitted=true");
+//   if (formSubmitted) {
+//     hideForm();
+//   }
+// });
+
+// Search
+document.getElementById("searchBox").addEventListener("input", function () {
   const keyword = this.value.toLowerCase();
-  const rows = document.querySelectorAll('tbody tr');
+  const rows = document.querySelectorAll("tbody tr");
 
-  rows.forEach(row => {
-    const name = row.children[2].textContent.toLowerCase(); // 3rd column is name
-    row.style.display = name.includes(keyword) ? '' : 'none';
+  rows.forEach((row) => {
+    const name = row.children[2].textContent.toLowerCase();
+    row.style.display = name.includes(keyword) ? "" : "none";
   });
 });
