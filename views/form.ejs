@@ -1,10 +1,29 @@
-<form action="/" method="POST">
-  <input type="text" name="name" required placeholder="Name">
-  <input type="email" name="email" required placeholder="Email">
-  <input type="text" name="gender" placeholder="Gender">
-  <input type="number" name="salary" placeholder="Salary">
-  <input type="text" name="role" placeholder="Role">
-  <button type="submit">Add Employee</button>
+<form action="/" method="POST" class="p-4 rounded shadow-sm bg-light mb-4" style="max-width: 500px; margin: auto;">
+  <h4 class="mb-3 text-center">Add Employee</h4>
+
+  <div class="mb-3">
+    <input type="text" name="name" required placeholder="Name" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <input type="email" name="email" required placeholder="Email" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="gender" placeholder="Gender" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" name="salary" placeholder="Salary" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" name="role" placeholder="Role" class="form-control">
+  </div>
+
+  <div class="d-grid">
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </div>
 </form>
 
 

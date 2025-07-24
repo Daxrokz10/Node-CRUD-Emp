@@ -1,3 +1,5 @@
+const { name } = require("ejs");
+
 function showForm() {
   document.getElementById("form-container").style.display = "block";
   document.getElementById("table-container").style.display = "none";
