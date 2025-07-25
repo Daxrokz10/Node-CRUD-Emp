@@ -47,6 +47,9 @@
                 <th>Gender</th>
                 <th>Salary</th>
                 <th>Role</th>
+                <th>Task Priortiy</th>
+                <th>Task</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -73,11 +76,17 @@
                         <%= employee.role %>
                     </td>
 
+                    <td>
+                        <%= employee.task ? employee.task.priority : 'N/A' %>
+                    </td>
+                    <td>
+                        <%= employee.task ? employee.task.description : 'N/A' %>
+                    </td>
 
                     <td class="d-flex">
                         <a href="/user/delete/<%= employee.id %>" class="btn btn-sm btn-danger">Delete</a>
                         <a href="/user/edit/<%= employee.id %>" class="btn btn-sm btn-warning">Edit</a>
-
+                        <a href="/user/task/<%= employee.id %>" class="btn btn-sm btn-warning">Task</a>
                     </td>
 
 

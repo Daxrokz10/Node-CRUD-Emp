@@ -1,13 +1,13 @@
 const { name } = require("ejs");
 
 function showForm() {
-  document.getElementById("form-container").style.display = "block";
-  document.getElementById("table-container").style.display = "none";
+  document.getElementById("form-container").classList.remove("d-none");
+  document.getElementById("table-container").classList.add("d-none");
 }
 
 function hideForm() {
-  document.getElementById("form-container").style.display = "none";
-  document.getElementById("table-container").style.display = "block";
+  document.getElementById("form-container").classList.add("d-none");
+  document.getElementById("table-container").classList.remove("d-none");
 }
 
 
@@ -29,4 +29,11 @@ document.getElementById("searchBox").addEventListener("input", function () {
     const name = row.children[2].textContent.toLowerCase();
     row.style.display = name.includes(keyword) ? "" : "none";
   });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const formSubmitted = window.location.href.includes("submitted=true");
+  if (formSubmitted) {
+    hideForm();
+  }
 });
